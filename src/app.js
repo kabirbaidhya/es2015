@@ -1,8 +1,14 @@
+class Shape {
+    constructor (x, y) {
+        this.move(x, y)
+    }
+    move (x, y) {
+        this.x = x
+        this.y = y
+    }
+}
 
-// ES6 way
-setTimeout(() => console.log('Hello from the ES6'), 1000);
-
-// ES5 way
-setTimeout(function() {
-     console.log('Hello from the ES5');
-}, 1000);
+var s = new Shape(1, 2);
+console.log(s);
+s.move(5, 6);
+console.log(s);
