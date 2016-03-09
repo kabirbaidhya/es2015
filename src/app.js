@@ -1,8 +1,8 @@
 
-class Foo extends Bar {
-    greet() {
-        return 'Hello ' + this.sayWorld();
-    }
-}
+// ES6 way
+setTimeout(() => console.log('Hello from the ES6'), 1000);
 
-document.querySelector('#app').innerHTML = (new Foo()).greet();
+// ES5 way
+setTimeout(function() {
+     console.log('Hello from the ES5');
+}, 1000);
