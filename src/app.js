@@ -1,8 +1,11 @@
 
-class Foo extends Bar {
-    greet() {
-        return 'Hello ' + this.sayWorld();
-    }
+var a = 10;
+
+for (let i = 0; i < 10; i++) {
+    let x = i + a;
+    var y = i + a;
+    console.log(x, i, a);
 }
 
-document.querySelector('#app').innerHTML = (new Foo()).greet();
+console.log(x, y);
+console.log(i, a);
