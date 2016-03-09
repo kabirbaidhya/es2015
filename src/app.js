@@ -1,8 +1,26 @@
+// Array destructuring
 
-// ES6 way
-setTimeout(() => console.log('Hello from the ES6'), 1000);
+var list = [ 1, 2, 3 ];
+var [ a, , b ] = list;
 
-// ES5 way
-setTimeout(function() {
-     console.log('Hello from the ES5');
-}, 1000);
+console.log(a, b);
+[ b, a ] = [ a, b ];
+
+console.log(a, b);
+
+// Object destructuring
+var obj = {
+    version: 'xx.xx.xx',
+    animate: () => console.log('animating'),
+    fadeIn: () => console.log('fading in'),
+    fadeOut: () => console.log('fading out'),
+    show: () => console.log('showing'),
+    hide: () => console.log('hiding')
+};
+
+// Get only two specific methods from
+var {version, animate, show} = obj;
+
+console.log(version);
+animate();
+show();
